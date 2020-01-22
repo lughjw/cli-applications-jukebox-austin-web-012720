@@ -1,6 +1,5 @@
 # Add your code here
 def run(songs)
-  #help
   command = get_command
   until command == "exit" do
     case command
@@ -27,11 +26,11 @@ def help
   puts "- exit : exits this program"
 end
 
+
 def play(songs)
-  #list(songs)
   puts "Please enter a song name or number:"
   song = gets.strip
-  song_index = song.scan(/\d+/).first.to_i-1
+  song_index = check_for_song_number(song)
   if song_index != nil && song_index >= 0 && song_index < songs.size
     song = songs[song_index]
     puts "Playing #{song}"
@@ -40,8 +39,10 @@ def play(songs)
   else
     puts "Playing #{song}"
   end
-  
-  
+end
+
+def check_for_song_number(song)
+  song.scan(/\d+/).first.to_i-1
 end
 
 def list(songs)
@@ -50,9 +51,11 @@ def list(songs)
   end
 end
 
+
 def exit_jukebox
   puts "Goodbye"
 end
+
 
 def get_command
   puts "Please enter a command:"

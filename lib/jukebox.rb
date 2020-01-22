@@ -1,6 +1,6 @@
 # Add your code here
 def run(songs)
-  help
+  #help
   command = get_command
   until command == "exit" do
     case command

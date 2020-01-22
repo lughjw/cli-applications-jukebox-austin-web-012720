@@ -29,7 +29,7 @@ end
 
 def play(songs)
   #list(songs)
-  puts "Please enter a song name or number:"
+  #puts "Please enter a song name or number:"
   song = gets.strip
   song_index = song.scan(/\d+/).first.to_i-1
   if song_index != nil && song_index >= 0 && song_index < songs.size
@@ -54,5 +54,6 @@ def exit_jukebox
 end
 
 def get_command
+  puts "Please enter a command:"
   gets.strip
 end

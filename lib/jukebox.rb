@@ -1,8 +1,5 @@
 # Add your code here
 def run(songs)
-  print "Enter your name: "
-  user_name = gets.strip
-  puts "Welcome #{user_name}!"
   help
   command = get_command
   until command == "exit" do

@@ -37,10 +37,10 @@ def play(songs)
     puts "Playing #{song}"
   elsif !songs.include?(song)
     puts "Invalid input, please try again"
+    
+  else
+    puts "Playing #{song}"
   end
-  
-  
-  puts "Playing #{song}"
   
   
 end

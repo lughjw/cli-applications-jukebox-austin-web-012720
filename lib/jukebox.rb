@@ -34,9 +34,11 @@ def play(songs)
   song_index = song.scan(/\d+/).first.to_i-1
   if song_index != nil && song_index >= 0 && song_index < songs.size
     song = songs[song_index]
+    puts "Playing #{song}"
   elsif !songs.include?(song)
     puts "Invalid input, please try again"
   end
+  
   
   puts "Playing #{song}"
   

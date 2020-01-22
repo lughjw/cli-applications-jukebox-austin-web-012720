@@ -28,7 +28,7 @@ def help
 end
 
 def play(songs)
-  list(songs)
+  #list(songs)
   puts "Please enter a song name or number:"
   song = gets.strip
   song_index = song.scan(/\d+/).first.to_i-1
